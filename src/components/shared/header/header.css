@@ -1,0 +1,19 @@
+.header .header-content-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)),
+    url("../../../assets/library-img.jpg") center/cover no-repeat;
+  min-height: 42rem;
+  color: var(--white-color);
+}
+.header .header-content-container .header-title {
+  font-size: 4.2rem;
+}
+.header .header-content-container .header-text {
+  margin: -1rem 0 2.5rem 0;
+  opacity: 0.8;
+  /* color: var(--black-color); */
+  /* max-width: 770px; */
+}

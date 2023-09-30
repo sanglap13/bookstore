@@ -1,0 +1,42 @@
+.searchbar {
+  width: 100%;
+  max-width: 680px;
+}
+.searchbar .searchbar-content .searchbar-form .searchbar-form-element {
+  padding: 1.4rem 2.8rem;
+  border-radius: 3.8rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white-color);
+}
+.searchbar
+  .searchbar-content
+  .searchbar-form
+  .searchbar-form-element
+  .form-input {
+  font-size: 2rem;
+  padding: 0.6rem;
+}
+.searchbar
+  .searchbar-content
+  .searchbar-form
+  .searchbar-form-element
+  .form-input::placeholder {
+  opacity: 0.9;
+}
+.searchbar
+  .searchbar-content
+  .searchbar-form
+  .searchbar-form-element
+  .form-submit {
+  display: flex;
+  justify-content: center;
+}
+.searchbar
+  .searchbar-content
+  .searchbar-form
+  .searchbar-form-element
+  .form-submit
+  .form-submit-icon {
+  color: var(--purple-color);
+}

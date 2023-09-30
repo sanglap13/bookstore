@@ -60,12 +60,7 @@
   .navbar-item {
   margin-bottom: 1.4rem;
 }
-.navbar
-  .navbar-content-container
-  .navbar-menu-collapse
-  .navbar-items
-  .navbar-item
-  .navbar-link {
+.navbar .navbar-content-container .navbar-items .navbar-item .navbar-link {
   transition: var(--transition);
   text-transform: uppercase;
   color: var(--white-color);
@@ -83,7 +78,7 @@
 }
 
 @media (width > 1200px) {
-  .navbar .navbar-content-container .show-navbar-menu-collapse {
+  .navbar .navbar-content-container .navbar-menu-collapse {
     position: relative;
     height: auto;
     padding: 0;

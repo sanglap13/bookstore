@@ -40,12 +40,12 @@ const Navbar = () => {
         >
           <ul className="navbar-items">
             <li className="navbar-item">
-              <Link to="book" className="navbar-link ">
+              <Link to="book" className="navbar-link">
                 Home
               </Link>
             </li>
             <li className="navbar-item">
-              <Link to="about" className="navbar-link ">
+              <Link to="about" className="navbar-link">
                 About
               </Link>
             </li>

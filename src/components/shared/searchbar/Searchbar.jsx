@@ -1,40 +1,46 @@
 import React, { useEffect, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useGlobalContext } from "../../../context/context";
 
 import "./searchbar.css";
 
 const Searchbar = () => {
-  // const { setSearchTerm, setResultTitle } = useGlobalContext();
-  // const searchText = useRef("");
-  // const navigate = useNavigate();
+  const { setSearchTerm, setResultTitle } = useGlobalContext();
+  const searchText = useRef("");
+  const navigate = useNavigate();
 
-  // useEffect(() => searchText.current.focus(), []);
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   let tempSearchTerm = searchText.current.value.trim();
-  //   if (tempSearchTerm.replace(/[^\w\s]/gi, "").length === 0) {
-  //     setSearchTerm("the lost world");
-  //     setResultTitle("Please Enter Something ...");
-  //   } else {
-  //     setSearchTerm(searchText.current.value);
-  //   }
+  useEffect(() => searchText.current.focus(), []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let tempSearchTerm = searchText.current.value.trim();
+    if (tempSearchTerm.replace(/[^\w\s]/gi, "").length === 0) {
+      setSearchTerm("the lost world");
+      setResultTitle("Please Enter Something ...");
+    } else {
+      setSearchTerm(searchText.current.value);
+    }
 
-  //   navigate("/book");
-  // };
+    navigate("/book");
+  };
 
   return (
     <div>
       <div className="searchbar">
         <div className="searchbar-content">
-          <form className="searchbar-form">
+          <form className="searchbar-form" onSubmit={handleSubmit}>
             <div className="searchbar-form-element">
               <input
                 type="text"
                 className="form-input"
                 placeholder="The Lost World ..."
+                ref={searchText}
               />
-              <button type="submit" className="form-submit">
+              <button
+                type="submit"
+                className="form-submit"
+                onSubmit={handleSubmit}
+              >
                 <FaSearch className="form-submit-icon" size={32} />
               </button>
             </div>

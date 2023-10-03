@@ -1,0 +1,100 @@
+/* booklist */
+.booklist {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+.booklist .booklist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.booklist .booklist-container .booklist-section-conten {
+  display: grid;
+  gap: 3rem;
+}
+
+/* book*/
+.book {
+  display: flex;
+  align-items: center;
+  padding: 3rem 2rem;
+  border-radius: 4px;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+  transition: var(--transition);
+}
+.book:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.book .book-item-img img {
+  max-width: 180px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.book .book-item-info {
+  text-align: center;
+  margin-top: 2rem;
+}
+.book .book-item-info .book-item-info-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+.book .book-item-info .book-item-info-author {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+.book .book-item-info .book-item-info-author .book-item-info-author-label {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.book .book-item-info .book-item-info-edition {
+  font-size: 1.5rem;
+}
+.book .book-item-info .book-item-info-edition .book-item-info-edition-label {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.item:not(.book-item-info-title) span:last-child {
+  opacity: 0.8;
+}
+
+.book .book-item-info .book-item-info-publish-year {
+  opacity: 0.6;
+  font-style: italic;
+  font-size: 14px;
+  font-size: 1.5rem;
+}
+.book
+  .book-item-info
+  .book-item-info-publish-year
+  .book-item-info-publish-year-label {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 600px) {
+  .booklist .booklist-container .booklist-section-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .booklist .booklist-container .booklist-section-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .book .book-item-img img {
+    max-width: 150px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .booklist .booklist-container .booklist-section-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .book .book-item-img img {
+    max-width: 120px;
+  }
+}

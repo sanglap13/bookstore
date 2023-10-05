@@ -1,0 +1,38 @@
+.about {
+  padding: 3rem 0;
+}
+.about .about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.about .about-container .about-content {
+  display: grid;
+  gap: 4rem;
+}
+.about .about-container .about-content .about-content-img img {
+  max-width: 520px;
+}
+.about
+  .about-container
+  .about-content
+  .about-content-text
+  .about-content-text-title {
+  margin: 1rem 0;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+}
+.about
+  .about-container
+  .about-content
+  .about-content-text
+  .about-content-text-description,
+.about
+  .about-container
+  .about-content
+  .about-content-text
+  .about-content-text-description-two {
+  font-size: 1.7rem;
+  margin: 1.8rem 0;
+  opacity: 0.8;
+}

@@ -65,37 +65,41 @@ const BookDetails = () => {
 
   return (
     <section className="book-details">
-      <div className="container">
+      <div className="book-details-container">
         <button
           type="button"
-          className="flex flex-c back-btn"
+          className="back-button"
           onClick={() => navigate("/book")}
         >
           <FaArrowLeft size={22} />
-          <span className="fs-18 fw-6">Go Back</span>
+          <span className="back-button-content">Go Back</span>
         </button>
 
-        <div className="book-details-content grid">
-          <div className="book-details-img">
+        <div className="book-details-content">
+          <div className="book-details-content-img">
             <img src={book?.cover_img} alt="cover img" />
           </div>
-          <div className="book-details-info">
+          <div className="book-details-content-info">
             <div className="book-details-item title">
-              <span className="fw-6 fs-24">{book?.title}</span>
+              <span>{book?.title}</span>
             </div>
             <div className="book-details-item description">
               <span>{book?.description}</span>
             </div>
             <div className="book-details-item">
-              <span className="fw-6">Subject Places: </span>
-              <span className="text-italic">{book?.subject_places}</span>
+              <span className="book-details-item-label">Subject Places: </span>
+              <span className="book-details-item-value">
+                {book?.subject_places}
+              </span>
             </div>
             <div className="book-details-item">
-              <span className="fw-6">Subject Times: </span>
-              <span className="text-italic">{book?.subject_times}</span>
+              <span className="book-details-item-label">Subject Times: </span>
+              <span className="book-details-item-value">
+                {book?.subject_times}
+              </span>
             </div>
             <div className="book-details-item">
-              <span className="fw-6">Subjects: </span>
+              <span className="book-details-item-label">Subjects: </span>
               <span>{book?.subjects}</span>
             </div>
           </div>
